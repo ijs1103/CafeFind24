@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import CoreLocation
 
 final class DetailViewModel {
     let cafe: Cafe
@@ -34,6 +35,18 @@ final class DetailViewModel {
     }
     var category: String {
         return cafe.category
+    }
+    var currentCoordi: CLLocationCoordinate2D {
+        let latLong = UserDefaultsManager.getCurrentLatLong()
+        let latitude = latLong.lat
+        let longitude = latLong.long
+        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+    var destinationCoordi: CLLocationCoordinate2D {
+        guard let latitude = Double(cafe.y), let longitude = Double(cafe.x) else {
+            return CLLocationCoordinate2D(latitude: 37.5069760639586, longitude: 126.958134851629)
+        }
+        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
     
     let buttonTapped = PassthroughSubject<MTMapPoint?, Never>()

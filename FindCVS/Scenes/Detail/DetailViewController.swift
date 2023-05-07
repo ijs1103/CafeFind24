@@ -9,9 +9,11 @@ import UIKit
 import SnapKit
 import Toast
 import Combine
+import CoreLocation
 
 protocol DetailViewControllerDelegate: AnyObject {
     func pushToWebView(urlString: String)
+    func pushToFindPathView(currentCoordi: CLLocationCoordinate2D, destinationCoordi: CLLocationCoordinate2D, cafeTitle: String)
 }
 
 final class DetailViewController: UIViewController {
@@ -151,7 +153,6 @@ extension DetailViewController {
     
     @objc private func didTappedLike() {
         viewModel.didTappedLike.send(viewModel.id)
-        
     }
     
     private func makePhoneCall() {
@@ -167,7 +168,7 @@ extension DetailViewController {
     }
     
     private func findPath() {
-        delegate?.pushToWebView(urlString: viewModel.findPathUrl)
+        delegate?.pushToFindPathView(currentCoordi: viewModel.currentCoordi, destinationCoordi: viewModel.destinationCoordi, cafeTitle: viewModel.title)
     }
     
     private func shareCafe() {

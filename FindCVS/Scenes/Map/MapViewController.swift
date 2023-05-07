@@ -326,6 +326,12 @@ extension MapViewController: DetailViewControllerDelegate {
         let webViewController = WebViewController(urlString: urlString)
         navigationController?.pushViewController(webViewController, animated: true)
     }
+    func pushToFindPathView(currentCoordi: CLLocationCoordinate2D, destinationCoordi: CLLocationCoordinate2D, cafeTitle: String) {
+        dismiss(animated: true)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        let findPathViewController = FindPathViewController(currentCoordi: currentCoordi, destinationCoordi: destinationCoordi, cafeTitle: cafeTitle)
+        navigationController?.pushViewController(findPathViewController, animated: true)
+    }
 }
 
 extension MapViewController: SearchBarViewDelegate {

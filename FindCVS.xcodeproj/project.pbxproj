@@ -54,6 +54,7 @@
 		2AB6D1322A0541A800741268 /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB6D1312A0541A800741268 /* LicenseViewController.swift */; };
 		2AB6D1342A05486800741268 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB6D1332A05486800741268 /* ProfileViewModel.swift */; };
 		2AB6D1362A054ED700741268 /* ProfileEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB6D1352A054ED700741268 /* ProfileEditViewModel.swift */; };
+		2AB6D13E2A07D86F00741268 /* FindPathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB6D13D2A07D86F00741268 /* FindPathViewController.swift */; };
 		7D331D4C27003AB1003BF547 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D331D4B27003AB1003BF547 /* AppDelegate.swift */; };
 		7D331D4E27003AB1003BF547 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D331D4D27003AB1003BF547 /* SceneDelegate.swift */; };
 		7D331D5527003AB3003BF547 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D331D5427003AB3003BF547 /* Assets.xcassets */; };
@@ -138,6 +139,7 @@
 		2AB6D1312A0541A800741268 /* LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
 		2AB6D1332A05486800741268 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		2AB6D1352A054ED700741268 /* ProfileEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewModel.swift; sourceTree = "<group>"; };
+		2AB6D13D2A07D86F00741268 /* FindPathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPathViewController.swift; sourceTree = "<group>"; };
 		7D331D4827003AB1003BF547 /* FindCVS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindCVS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D331D4B27003AB1003BF547 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D331D4D27003AB1003BF547 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 		2A63A67A29F7F23A00CD0E51 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2AB6D13C2A07D85600741268 /* FindPath */,
 				2AB6D1302A05419100741268 /* License */,
 				2AB6D12A2A0540F800741268 /* ProfileEdit */,
 				2AB6D1132A03F8AA00741268 /* Profile */,
@@ -407,6 +410,14 @@
 				2AB6D1312A0541A800741268 /* LicenseViewController.swift */,
 			);
 			path = License;
+			sourceTree = "<group>";
+		};
+		2AB6D13C2A07D85600741268 /* FindPath */ = {
+			isa = PBXGroup;
+			children = (
+				2AB6D13D2A07D86F00741268 /* FindPathViewController.swift */,
+			);
+			path = FindPath;
 			sourceTree = "<group>";
 		};
 		7D331D3F27003AB1003BF547 = {
@@ -664,6 +675,7 @@
 				2AB6D0FE2A039A7000741268 /* SearchCollectionViewHeader.swift in Sources */,
 				2A63A6B229FADBBE00CD0E51 /* WebViewController.swift in Sources */,
 				2A63A6AD29FAD80A00CD0E51 /* SpacingView.swift in Sources */,
+				2AB6D13E2A07D86F00741268 /* FindPathViewController.swift in Sources */,
 				2A63A67D29F7F26500CD0E51 /* MapViewController.swift in Sources */,
 				2AB6D1152A04018200741268 /* ProfileViewController.swift in Sources */,
 				2AB6D1292A0540CB00741268 /* UIImage+.swift in Sources */,
