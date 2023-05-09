@@ -23,8 +23,11 @@ final class SearchViewModel {
 }
 extension SearchViewModel {
     private func bindSearchKeyword() {
-        searchKeyword.debounce(for: 0.17, scheduler: RunLoop.main)
+        searchKeyword.debounce(for: 0.4, scheduler: RunLoop.main)
             .compactMap { $0 }
+            .filter {
+                $0.count > 0
+            }
             .sink { [unowned self] keyword in
                 self.fetchCafeList(keyword: keyword)
             }.store(in: &subscriptions)
